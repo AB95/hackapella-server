@@ -9,8 +9,9 @@ s.listen(1)
 while True:
     connection, client_address = s.accept()
     print "hi"
-    incoming = connection.recv(31)
+    incoming = connection.recv(37)
+    connection.close()
     break
 
 s.close()
-print
+print incoming
